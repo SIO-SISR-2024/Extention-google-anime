@@ -3,9 +3,8 @@ chrome.action.onClicked.addListener(async (tab) => {
     let [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true });
   
     // Exécute un script dans la page pour incrémenter le nombre dans l'URL
-    chrome.scripting.executeScript({
-      target: { tabId: activeTab.id },
-      function: incrementNumber
+    chrome.tabs.executeScript(activeTab.id, {
+      code: `(${incrementNumber})();`
     });
   });
   
