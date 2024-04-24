@@ -1,3 +1,9 @@
 https://www.youtube.com/watch?v=IrUWoq64Qfk&t=430s ==> ce tuto met en place les base des extentions google
 
 https://www.youtube.com/watch?v=uV4L-wcnK3Y ==> ce tuto met en place les base des extentions google mais il est en anglais 
+
+https://developer.chrome.com/docs/extensions/reference/manifest?hl=fr ==> Liens utile pour les commandes
+
+https://developer.chrome.com/docs/extensions/reference/api/action?hl=fr ==> Pour les API comme dans le projet pour les urls
+
+//extensions ==> Pour gerer les extentions sur le navigateurs
