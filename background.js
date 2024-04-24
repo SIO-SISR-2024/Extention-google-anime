@@ -1,11 +1,11 @@
-chrome.action.onClicked.addListener(async (tab) => {
-    // Récupère l'onglet actif
-    let [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  
-    // Exécute un script dans la page pour incrémenter le nombre dans l'URL
-    chrome.tabs.executeScript(activeTab.id, {
-      code: `(${incrementNumber})();`
-    });
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.action === "incrementNumber") {
+      chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+        chrome.tabs.executeScript(tabs[0].id, {
+          code: `(${incrementNumber})();`
+        });
+      });
+    }
   });
   
   // Fonction pour incrémenter le nombre dans l'URL et recharger la page
@@ -19,4 +19,3 @@ chrome.action.onClicked.addListener(async (tab) => {
       window.location.href = newUrl;
     }
   }
-  
