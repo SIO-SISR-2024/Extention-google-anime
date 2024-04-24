@@ -1,16 +1,21 @@
 {
-    "manifest_version": 3,
-    "name": "AniPlex",
-    "version": "1.0.0",
-    "description": "Cette extension permet de faire un skip d'un anime à un autre",
-    "icons": {
+  "manifest_version": 3,
+  "name": "AniPlex",
+  "version": "1.0.0",
+  "description": "Cette extension permet de faire un skip d'un anime à un autre",
+  "icons": {
+    "48": "image-48.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "action": {
+    "name": "Action Extension",
+    "default_icon": {
       "48": "image-48.png"
-    },
-    "action": {
-      "name": "Action Extension",
-      "default_icon": {
-        "48": "image-48.png"
-      }
     }
   }
-  
+}
